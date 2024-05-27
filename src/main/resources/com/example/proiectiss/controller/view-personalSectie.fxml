@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="660.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.HospitalWorkerController">
+    <children>
+        <Button layoutX="681.0" layoutY="28.0" mnemonicParsing="false" onAction="#handleLogout" text="Logout" />
+        <TableView fx:id="tableViewDrugs" layoutX="12.0" layoutY="66.0" prefHeight="200.0" prefWidth="462.0">
+            <columns>
+                <TableColumn fx:id="tableColumnDrugName" prefWidth="140.0" text="Nume medicament" />
+                <TableColumn fx:id="tableColumnDrugDescription" prefWidth="151.40003967285156" text="Descriere" />
+                <TableColumn fx:id="tableColumnDrugDateProduced" prefWidth="177.4000244140625" text="Data la care a fost produs" />
+            </columns>
+        </TableView>
+        <Label layoutX="151.0" layoutY="32.0" text="Lista de medicamente disponibile" />
+        <TableView fx:id="tableViewAllOrders" layoutX="34.0" layoutY="334.0" prefHeight="231.0" prefWidth="338.0">
+            <columns>
+                <TableColumn fx:id="tableColumnAllOrdersStatus" prefWidth="122.20000457763672" text="Status" />
+                <TableColumn fx:id="tableColumnAllOrdersRegisteredAt" prefWidth="215.39999389648438" text="Data inregistrare comanda" />
+            </columns>
+        </TableView>
+        <Label layoutX="127.0" layoutY="307.0" text="Lista de comenzi inregistrate" />
+        <Button onAction="#registerNewOrder" layoutX="461.0" layoutY="552.0" mnemonicParsing="false" text="Inregistrare comanda" />
+        <TextField fx:id="textFieldQuantity" layoutX="590.0" layoutY="130.0" />
+        <Label layoutX="525.0" layoutY="129.0" prefHeight="26.0" prefWidth="48.0" text="Cantitate" />
+        <Button layoutX="569.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleAddToNewOrder" text="Adauga la comanda" />
+        <TableView fx:id="tableViewCurrentOrder" layoutX="457.0" layoutY="354.0" prefHeight="173.0" prefWidth="300.0">
+            <columns>
+                <TableColumn fx:id="tableColumnCurrentOrderDrugName" prefWidth="149.4000244140625" text="Nume medicament" />
+                <TableColumn fx:id="tableColumnCurrentOrderQuantity" prefWidth="149.800048828125" text="Cantitate" />
+            </columns>
+        </TableView>
+        <Label layoutX="561.0" layoutY="321.0" text="Comanda actuala" />
+      <Button onAction="#handleRemoveFromNewOrder" layoutX="610.0" layoutY="551.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="141.0" text="Elimina medicament" />
+    </children>
+</AnchorPane>

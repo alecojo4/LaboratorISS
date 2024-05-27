@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="430.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.SignUpController">
+    <children>
+        <Label layoutX="161.0" layoutY="22.0" text="INREGISTRARE">
+            <font>
+                <Font size="48.0" />
+            </font>
+        </Label>
+        <Label layoutX="188.0" layoutY="206.0" text="PAROLA" />
+        <Label layoutX="127.0" layoutY="270.0" prefHeight="26.0" prefWidth="122.0" text="CONFIRMARE PAROLA" />
+        <TextField fx:id="usernameField" layoutX="260.0" layoutY="137.0" />
+        <PasswordField fx:id="passwordField" layoutX="257.0" layoutY="202.0" />
+        <PasswordField fx:id="confirmPasswordField" layoutX="257.0" layoutY="271.0" />
+        <Button onAction="#handleSignUp" layoutX="206.0" layoutY="384.0" mnemonicParsing="false" text="Creeaza un cont nou" />
+        <Button onAction="#changeToLogin" layoutX="454.0" layoutY="384.0" mnemonicParsing="false" text="Catre autentificare" />
+        <Label layoutX="460.0" layoutY="355.0" text="Aveti deja un cont?" />
+        <RadioButton fx:id="pharmacistRadioButton" layoutX="171.0" layoutY="323.0" mnemonicParsing="false" text="Farmacie" />
+        <RadioButton fx:id="workerRadioButton" layoutX="304.0" layoutY="319.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="54.0" text="Sectie" />
+      <Label layoutX="179.0" layoutY="141.0" text="USERNAME" />
+    </children>
+</AnchorPane>

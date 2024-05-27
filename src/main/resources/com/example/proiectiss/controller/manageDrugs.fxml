@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="525.0" prefWidth="720.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proiectiss.controller.ManageDrugsController">
+    <children>
+        <TableView fx:id="tableViewDrugs" layoutX="63.0" layoutY="73.0" prefHeight="200.0" prefWidth="588.0">
+            <columns>
+                <TableColumn fx:id="tableColumnDrugName" prefWidth="153.20000457763672" text="Nume" />
+                <TableColumn fx:id="tableColumnDrugDescription" prefWidth="264.20001220703125" text="Descriere" />
+                <TableColumn fx:id="tableColumnDrugDateProduced" prefWidth="171.80001831054688" text="Data la care a fost produs" />
+            </columns>
+        </TableView>
+        <Label layoutX="294.0" layoutY="26.0" text="Lista de medicamente" />
+        <Label layoutX="258.0" layoutY="299.0" text="Nume:" />
+        <Label layoutX="250.0" layoutY="353.0" text="Descriere:" />
+        <Label layoutX="200.0" layoutY="399.0" text="Data la care a fost produs:" />
+        <TextField fx:id="textFieldName" layoutX="369.0" layoutY="295.0" />
+        <TextField fx:id="textFieldDescription" layoutX="369.0" layoutY="349.0" />
+        <DatePicker fx:id="datePickerDateProduced" layoutX="369.0" layoutY="395.0" />
+        <Button onAction="#addDrug" layoutX="160.0" layoutY="456.0" mnemonicParsing="false" text="Adauga medicament" />
+        <Button onAction="#updateDrug" layoutX="338.0" layoutY="456.0" mnemonicParsing="false" text="Modifica medicament" />
+        <Button onAction="#deleteDrug" layoutX="519.0" layoutY="456.0" mnemonicParsing="false" text="Sterge medicament" />
+    </children>
+</AnchorPane>
